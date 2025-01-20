@@ -2,6 +2,7 @@ import React from "react";
 import Description from "./Description";
 import Preparation from "./Preparation";
 import IngredientInstruction from "./IngredientInstruction";
+import Nutrition from "./Nutrition";
 
 const Card = ({
   className,
@@ -11,6 +12,12 @@ const Card = ({
   titlePrep,
   descriptionPrep,
   titleIngredient,
+  descriptionIngredient,
+  titleInstructions,
+  descriptionInstructions,
+  titleNutrition,
+  descriptionNutrition,
+  tabNutrition,
 }) => {
   return (
     <div className={className}>
@@ -21,11 +28,24 @@ const Card = ({
         className="w-full mb-9"
       />
       <Preparation
-        className="bg-rose-50 p-7 font-Outfit rounded-2xl"
+        className="mb-8 bg-rose-50 p-7 font-Outfit rounded-2xl"
         title={titlePrep}
         description={descriptionPrep}
       />
-      <IngredientInstruction title={titleIngredient} />
+      <IngredientInstruction
+        typeComponent={"ingredient"}
+        title={titleIngredient}
+        description={descriptionIngredient}
+      />
+      <IngredientInstruction
+        title={titleInstructions}
+        description={descriptionInstructions}
+      />
+      <Nutrition
+        title={titleNutrition}
+        description={descriptionNutrition}
+        table={tabNutrition}
+      />
     </div>
   );
 };
