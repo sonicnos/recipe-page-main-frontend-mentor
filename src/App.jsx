@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "./components/Card";
-import foodImage from "./assets/image-omelette.jpeg";
+import foodImage from "../public/image-omelette.jpeg";
 
 function App() {
   const [data, setData] = useState({
